@@ -33,8 +33,12 @@ export function Office(props) {
   const glassTextureOpacity = useMotionValue(0);
 
   useEffect(() => {
-    animate(textureOpacity, section === 0 ? 1 : 0);
-    animate(glassTextureOpacity, section === 0 ? 0.42 : 0);
+    animate(textureOpacity, section === 0 ? 1 : 0, {
+      duration: 0.8,
+    });
+    animate(glassTextureOpacity, section === 0 ? 0.42 : 0, {
+      duration: 0.8,
+    });
   }, [section]);
 
   useFrame(() => {
@@ -163,8 +167,9 @@ export function Office(props) {
       </motion.group>
       <group
         name="keyboard"
-        position={[-0.04, 0.98, -1.35]}
-        rotation={[0, -0.17, 0]}
+        position={[-0.082, 0.98, -1.266]}
+        rotation={[0, -0.165, 0]}
+        scale={0.568}
       >
         <mesh
           name="mesh425587018"
@@ -216,6 +221,7 @@ export function Office(props) {
         name="Comp_Mouse"
         geometry={nodes.Comp_Mouse.geometry}
         material={textureMaterial}
+        position={[-0.294, -0.003, -0.014]}
       />
       <motion.group
         scale={[0, 0, 0]}
@@ -297,8 +303,8 @@ export function Office(props) {
           scale: section === 0 ? 1 : 0,
         }}
         name="Chair"
-        position={[-0.28, 0, -0.71]}
-        rotation={[0, -0.38, 0]}
+        position={[-0.278, 0, -0.708]}
+        rotation={[0, -0.376, 0]}
       >
         <mesh
           name="Node-Mesh"
@@ -336,3 +342,4 @@ export function Office(props) {
 }
 
 useGLTF.preload("models/scene.gltf");
+useTexture.preload("textures/baked.jpg");
