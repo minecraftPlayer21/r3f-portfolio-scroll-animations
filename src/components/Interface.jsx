@@ -67,9 +67,8 @@ const AboutSection = (props) => {
           delay: 1.5,
         }}
       >
-        I make YouTube videos to help developers
-        <br />
-        learn how to build 3D apps
+        I am a second year ECE student
+        <br />I learn how to build 3D apps!
       </motion.p>
       <motion.button
         onClick={() => setSection(3)}
