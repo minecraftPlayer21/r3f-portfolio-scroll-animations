@@ -10,3 +10,100 @@
 body {
   margin: 0;
 }
+
+ {
+  /* this is all added onto first page index css*/
+}
+/* Container Styles */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1f1e28, #080808);
+  text-align: center;
+}
+
+/* Title Styles */
+.about-title {
+  font-size: 3em;
+  font-weight: 700;
+  margin-top: 20px;
+  color: #fff;
+  background: -webkit-linear-gradient(45deg, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Name Highlight */
+.about-name {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0 5px;
+  border-radius: 5px;
+  font-style: italic;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Description Styles */
+.about-description {
+  font-size: 1.2em;
+  color: #d3d3d3;
+  margin-top: 20px;
+  max-width: 800px;
+  text-align: justify;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Button Styles */
+.explore-button {
+  background: linear-gradient(45deg, #4a90e2, #357ab8);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+  transition: all 0.3s ease;
+}
+
+.explore-button:hover {
+  background: linear-gradient(45deg, #357ab8, #4a90e2);
+  box-shadow: 0 6px 20px 0 rgba(0, 118, 255, 0.49);
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2em;
+  }
+
+  .about-description {
+    font-size: 1em;
+  }
+
+  .explore-button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.5em;
+  }
+
+  .about-description {
+    font-size: 0.8em;
+  }
+
+  .explore-button {
+    font-size: 0.8em;
+    padding: 6px 12px;
+  }
+}

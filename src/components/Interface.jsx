@@ -47,13 +47,13 @@ const AboutSection = (props) => {
   const { setSection } = props;
   return (
     <Section mobileTop>
-      <h1 className="text-4xl md:text-6xl font-extrabold leading-snug mt-8 md:mt-0">
+      <h1 className="about-title">
         Hi, I'm
         <br />
-        <span className="bg-white px-1 italic">Malak Khalifa</span>
+        <span className="about-name">Malak Khalifa</span>
       </h1>
       <motion.p
-        className="text-lg text-gray-600 mt-4"
+        className="about-description"
         initial={{
           opacity: 0,
           y: 25,
@@ -67,13 +67,12 @@ const AboutSection = (props) => {
           delay: 1.5,
         }}
       >
-        I am a second year ECE student
+        I am a second-year ECE student
         <br />I learn how to build 3D apps!
       </motion.p>
       <motion.button
-        onClick={() => setSection(3)}
-        className={`bg-indigo-600 text-white py-4 px-8 
-      rounded-lg font-bold text-lg mt-4 md:mt-16`}
+        onClick={() => window.open("https://aboutme-mk.netlify.app/", "_blank")}
+        className="explore-button"
         initial={{
           opacity: 0,
           y: 25,
@@ -87,7 +86,7 @@ const AboutSection = (props) => {
           delay: 2,
         }}
       >
-        Contact me
+        Explore Me
       </motion.button>
     </Section>
   );
